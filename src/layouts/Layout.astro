@@ -184,15 +184,31 @@ if (database.Icon && database.Icon.Type === 'file') {
     order: 1;
     width: 300px;
     padding: 20px 20px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
     border-left: 1px solid var(--accents-2);
-    box-shadow: -5px 0 15px rgba(0, 255, 204, 0.1);
+    box-shadow: 
+      -5px 0 15px rgba(0, 255, 204, 0.1),
+      0 0 10px rgba(0, 255, 204, 0.2) inset;
+    backdrop-filter: blur(5px);
+    border-image: linear-gradient(
+      to bottom,
+      var(--accents-2),
+      var(--accents-3)
+    ) 1;
   }
   @media (max-width: 640px) {
     aside {
       order: 2;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+      background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.7) 100%
+      );
     }
   }
 
