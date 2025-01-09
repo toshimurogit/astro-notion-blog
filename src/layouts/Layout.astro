@@ -236,14 +236,38 @@ if (database.Icon && database.Icon.Type === 'file') {
   }
   main header h1 {
     font-weight: 700;
-    color: #333;
+    color: var(--fg);
+    text-shadow: 
+      0 0 5px var(--accents-1),
+      0 0 10px var(--accents-1),
+      0 0 20px var(--accents-1);
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
   }
   main header h1 a {
     display: block;
     color: inherit;
+    transition: text-shadow 0.3s ease;
   }
   main header h1 a:hover {
-    color: inherit;
+    text-shadow: 
+      0 0 10px var(--accents-1),
+      0 0 20px var(--accents-1),
+      0 0 40px var(--accents-1);
+  }
+
+  @keyframes neonGlow {
+    from {
+      text-shadow: 
+        0 0 5px var(--accents-1),
+        0 0 10px var(--accents-1),
+        0 0 20px var(--accents-1);
+    }
+    to {
+      text-shadow: 
+        0 0 10px var(--accents-1),
+        0 0 20px var(--accents-2),
+        0 0 40px var(--accents-3);
+    }
   }
   main header h1 a span,
   main header h1 a img {
